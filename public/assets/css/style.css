@@ -1,0 +1,96 @@
+/* #FED049 jaune
+#CFFDE1 vert clair
+#68B984 vert
+#3D5656 vert foncé */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Julee', cursive;
+    background-color: #CFFDE1;
+}
+
+/* header */
+header {
+    background-color: #68B984;
+    color: #FED049;
+    text-shadow: 0.1em 0.1em 0.2em #3D5656;
+}
+
+.nav-link {
+    color: #FED049;
+    text-shadow: 0.1em 0.1em 0.2em #3D5656;
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 4.5rem;
+}
+
+
+/* main */
+
+
+/* home */
+h1 {
+    padding-top: 1rem;
+    color: #3D5656;
+    text-shadow: 0.1em 0.1em 0.2em #FED049;
+}
+
+p {
+    color: #3D5656;
+
+}
+
+.exos {
+    width: 20rem;
+    height: 14.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: justify;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+h2 {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+h3{
+    color: #FED049;
+    text-shadow: 0.1em 0.1em 0.2em #000000;
+}
+
+.black{
+    font-weight: bolder;
+}
+
+.clients{
+    border-radius: 1rem;
+    border: thick double #FED049;
+    background-color: #68B984;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    height : 9rem;
+}
+
+/* error 404 */
+
+.error404 {
+    height: 81.6vh;
+}
+
+.error404>h1 {
+    font-size: 6rem;
+}
+
+/* footer */
+footer {
+    background-color: #68B984;
+    color: #FED049;
+    text-shadow: 0.1em 0.1em 0.2em #3D5656;
+}
+
