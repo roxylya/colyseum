@@ -9,7 +9,8 @@ require_once(__DIR__ .'/../config/constants.php');
 function getClients()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sth = $dbh->query('SELECT * FROM `clients`');
+    $sql='SELECT * FROM `clients`';
+    $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
 }
@@ -19,7 +20,8 @@ function getClients()
 function getClients20()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sth = $dbh->query('SELECT * FROM `clients` LIMIT 20');
+    $sql='SELECT * FROM `clients` LIMIT 20';
+    $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
 }
@@ -29,7 +31,8 @@ function getClients20()
 function getClientsFidelity()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sth = $dbh->query('SELECT `clients`.* FROM `clients` INNER JOIN `cards`  ON `clients`.`cardNumber` =  `cards`.`cardNumber` WHERE `cards`.`cardTypesId` = 1');
+    $sql='SELECT `clients`.* FROM `clients` INNER JOIN `cards`  ON `clients`.`cardNumber` =  `cards`.`cardNumber` WHERE `cards`.`cardTypesId` = 1';
+    $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
 }
@@ -40,7 +43,8 @@ function getClientsFidelity()
 function getClientsAscM()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sth = $dbh->query("SELECT `firstName`, `lastName` FROM `clients` WHERE `lastname` LIKE 'M%' ORDER BY `lastname`");
+    $sql="SELECT `firstName`, `lastName` FROM `clients` WHERE `lastname` LIKE 'M%' ORDER BY `lastname`";
+    $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
 }
