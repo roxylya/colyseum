@@ -1,7 +1,7 @@
-<main class="p-4">
+<main class="p-4 pb-5">
     <div class="d-flex flex-column justify-content-center align-items-center pb-2">
 
-        <div class="exos d-flex flex-column justify-content-center align-items-center">
+        <div class="exos d-flex flex-column justify-content-center align-items-center mb-5">
             <h2>Exercice 6</h2>
             <p> Afficher le titre de tous les spectacles ainsi que l'artiste, la date et l'heure. Trier les titres par ordre alphabétique.
                 Afficher les résultat comme ceci : 'Spectacle' par 'artiste', le 'date' à 'heure'.</p>
@@ -16,9 +16,5 @@
                 </p>
             </div>
         </div>
-    </div>
-    <div class="empty">
-        <br>
-        <br>
     </div>
 </main>

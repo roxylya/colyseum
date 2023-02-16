@@ -1,6 +1,6 @@
 <main class="p-4">
     <div class="d-flex flex-column justify-content-center align-items-center pb-2">
-        <div class="exos d-flex flex-column justify-content-center align-items-center">
+        <div class="exos d-flex flex-column justify-content-center align-items-center mb-5">
             <h2>Exercice 3</h2>
             <p>Afficher les 20 premiers clients.</p>
         </div>

@@ -1,7 +1,7 @@
 <main class="p-4">
     <div class="d-flex flex-column justify-content-center align-items-center pb-2">
 
-        <div class="exos d-flex flex-column justify-content-center align-items-center">
+        <div class="exos d-flex flex-column justify-content-center align-items-center mb-5">
             <h2>Exercice 1</h2>
             <p> Exécuter le script colyseum.sql fourni avant de commencer. Tous les résultats devront être affichés dans une page index.php.
                 Afficher tous les clients.</p>
