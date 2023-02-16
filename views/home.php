@@ -1,4 +1,4 @@
-<main>
+<main class="p-4">
     <h1 class="text-center">Lire les données</h1>
     <div class="d-flex flex-wrap justify-content-center align-items-center pb-2">
         <div class="exos d-flex flex-column justify-content-center align-items-center">
