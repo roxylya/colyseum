@@ -3,7 +3,7 @@
 require_once(__DIR__ . '/../models/Clients.php');
 
 
-$clients = getClients();
+$clients = getAllClients();
 
 
 include(__DIR__ . '/../views/templates/header.php');

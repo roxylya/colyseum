@@ -1,10 +1,5 @@
 <?php 
 
-// on a besoin d'accéder aux constantes :
-// require_once(__DIR__ .'/../config/constants.php');
-// on a besoin du fichier helpers dd :
-// require_once(__DIR__ .'/../helpers/dd.php');
-
 // on a besoin du models :
 require_once(__DIR__ . '/../models/Showtypes.php');
 

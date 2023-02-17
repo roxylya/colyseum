@@ -16,16 +16,11 @@
                 <div class="d-flex flex-wrap justify-content-center align-items-center">
                     <?php
                     foreach ($clients as $client) {
-                        if ($client->card = 1) {
-                            $client->card = 'Oui';
-                        } else {
-                            $client->card = 'Non';
-                        }
                         echo  '<div class="clients m-3 p-2"><p><span class="black">Nom :</span> ' . $client->lastName . '</br>'
                             . '<span class="black">Prénom :</span> ' . $client->firstName . '</br>'
-                            . '<span class="black">Date de naissance :</span> ' . date('d/m/Y', strtotime($client->birthDate)) . '</br>'
-                            . '<span class="black">Carte de fidélité :</span> ' . $client->card . '</br>'
-                            . '<span class="black">Numéro de carte :</span> ' . $client->cardNumber . '</p></div>';
+                            . '<span class="black">Date de naissance :</span> ' . $client->birthDate. '</br>'
+                            . '<span class="black">Carte de fidélité :</span> ' . $client->fidelity . '</br>'
+                            . '<span class="black">Numéro de carte :</span> ' . $client->cardFidelity . '</p></div>';
                     } ?>
                 </div>
             </div>

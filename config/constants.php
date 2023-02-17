@@ -4,4 +4,4 @@ define("USER",'colyseum_user');
 define("PASSWORD",'MEniwg4akXXFvd7.');
 
 
-$dbh = new PDO(DSN, USER, PASSWORD);
+
