@@ -6,7 +6,7 @@ require_once(__DIR__ . '/../config/constants.php');
 
 function getShowtypes(){
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sql= 'SELECT `type` FROM `showtypes`';
+    $sql= 'SELECT `type` FROM `showtypes`;';
     $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;

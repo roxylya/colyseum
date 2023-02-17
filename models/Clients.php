@@ -9,7 +9,7 @@ require_once(__DIR__ .'/../config/constants.php');
 function getClients()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sql='SELECT * FROM `clients`';
+    $sql='SELECT * FROM `clients`;';
     $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
@@ -20,7 +20,7 @@ function getClients()
 function getClients20()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sql='SELECT * FROM `clients` LIMIT 20';
+    $sql='SELECT * FROM `clients` LIMIT 20;';
     $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
@@ -31,11 +31,20 @@ function getClients20()
 function getClientsFidelity()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sql='SELECT `clients`.* FROM `clients` INNER JOIN `cards`  ON `clients`.`cardNumber` =  `cards`.`cardNumber` WHERE `cards`.`cardTypesId` = 1';
+    $sql='SELECT `clients`.* FROM `clients` INNER JOIN `cards`  ON `clients`.`cardNumber` =  `cards`.`cardNumber` WHERE `cards`.`cardTypesId` = 1;';
     $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
 }
+
+
+// Si la condition vient de l'extérieur au lieu de query() on utilise prepare() et execute:
+
+// $sth= $dbh->prepare($sql);
+// $sth->execute();
+
+
+
 
 // Afficher uniquement le nom et le prénom de tous les clients dont le nom commence par la lettre "M". 
 // Les afficher comme ceci : Nom : Nom du client Prénom : Prénom du client Trier les noms par ordre alphabétique
@@ -43,7 +52,7 @@ function getClientsFidelity()
 function getClientsAscM()
 {
     $dbh = new PDO(DSN, USER, PASSWORD);
-    $sql="SELECT `firstName`, `lastName` FROM `clients` WHERE `lastname` LIKE 'M%' ORDER BY `lastname`";
+    $sql="SELECT `firstName`, `lastName` FROM `clients` WHERE `lastname` LIKE 'M%' ORDER BY `lastname`;";
     $sth = $dbh->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
