@@ -1,17 +1,17 @@
 <?php
 
-// on a besoin d'accéder aux constantes :
-require_once(__DIR__ .'/../config/constants.php');
+// on a besoin d'accéder à la db :
+require_once(__DIR__ .'/../models/database.php');
 
 
-// Afficher tous les clients.
+// Afficher tous les spectacles par ordre alphabétique des titres.
 
-function getShows()
+function getShows():array
 {
-    $db = new PDO(DSN, USER, PASSWORD);
+    $db = dbConnect();
     $sql= 'SELECT `title`,`performer`,`date`,`startTime` FROM `shows` ORDER BY `title`;';
-    $sth = $db->prepare($sql);
-    $sth->execute();
+    // $sql= 'SELECT `title`,`performer`,DATE_FORMAT(`date`, "%d/%m/%Y") AS `date`,`startTime` FROM `shows` ORDER BY `title`;';
+    $sth = $db->query($sql);
     $results = $sth->fetchAll(PDO::FETCH_OBJ);
     return $results;
 }
