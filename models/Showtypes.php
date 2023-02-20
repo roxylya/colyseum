@@ -10,6 +10,6 @@ function getShowtypes(): array
     $db = dbConnect();;
     $sql = 'SELECT `type` FROM `showtypes`;';
     $sth = $db->query($sql);
-    $results = $sth->fetchAll(PDO::FETCH_OBJ);
+    $results = $sth->fetchAll();
     return $results;
 }
